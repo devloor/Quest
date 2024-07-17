@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block main %}
+
+<form method="post">
+    {% csrf_token %}
+    <label type="text" >Name : </label>
+    <input name="Name"><br><br>
+    <label type="text" >Registration Number : </label>
+    <input name="RegNo"><br><br>
+    <label type="text" >Department : </label>
+    <input name="Dept"><br><br>
+    <label type="Number" name="Age" > Age : </label>
+    <input name="Age"> <br><br>
+    <label type="text" step="0.01" min="0" value="0" >CGPA : </label>
+    <input name="CGPA"><br><br>
+    <!-- <label type="date" name="">Date Joined : </label>
+    <input><br><br> -->
+    <button>Register</button>
+</form>
+
+{% endblock %}

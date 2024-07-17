@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>  {% block title %}  {% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'Register' %}">Register</a></li>
+        </ul>
+        <hr>
+    </nav>
+    {% for message in messages %}
+        <p style="color: red;">{{message}} </p>
+        {% endfor %}
+
+    {% block main %} 
+
+    {% endblock %}
+    
+
+
+    <footer>
+        This is the footer
+    </footer>
+</body>
+</html>
